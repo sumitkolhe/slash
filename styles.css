@@ -1,0 +1,188 @@
+
+/******************************/
+/*     01. General Styles     */
+/******************************/
+
+
+.btn-solid-lg {
+	display: inline-block;
+	padding: 1.0rem 2.0rem 1.0rem 2.0rem;
+	border: 0.125rem solid #88bdbc;
+	border-radius: 2rem;
+	background-color: #88bdbc;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	outline: none;
+}
+
+.form-control-input,
+.form-control-select {
+	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
+	width: 100%;
+	padding-top: .5625rem;
+	padding-bottom: 0.5625rem;
+	padding-left: 1.25rem;
+	margin-top: 1.5625rem;
+	border: 1px solid #c4d8dc;
+	border-radius: .3rem;
+	background-color: #fff;
+	color: #555;
+	outline: none;
+	font: 400 0.875rem/1.875rem "Open Sans", sans-serif;
+	transition: all 0.2s;
+	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+}
+
+
+/*********************/
+/*    04. Header     */
+/*********************/
+.header {
+	background-color: #34495e;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+.header .text-container {
+	margin-bottom: 3rem;
+}
+
+.header h1 {
+	margin-bottom: 1rem;
+	color: #fff;
+	font-size: 2.5rem;
+	line-height: 3rem;
+}
+
+.header .p-large {
+	margin-bottom: 2rem;
+	color: #f3f7fd;
+}
+
+.header .btn-solid-lg {
+	margin-right: 0.5rem;
+	margin-bottom: 1.125rem;
+	margin-top: 1.125rem;
+	margin-left: 0.5rem;
+	border-color: #f3f7fd;
+	background-color: #f3f7fd;
+	color: #242424;
+}
+
+.header .btn-solid-lg:hover {
+	background: transparent;
+	color: #f3f7fd;
+}
+
+.header .btn-outline-lg {
+	border-color: #f3f7fd;
+	color: #f3f7fd;
+}
+
+.header .btn-outline-lg:hover {
+	background-color: #f3f7fd;
+	color: #5f4dee;
+}
+
+.header-frame {
+	margin-top: -1px; /* To remove white margin in FF */
+	width: 100%;
+	height: 2.25rem;
+}
+
+
+
+
+
+	/* Header */
+	.header .text-container {
+		margin-bottom: 4rem;
+	}
+
+	.header h1 {
+		font-size: 3.5rem;
+		line-height: 4.125rem;
+	}
+
+	.header .btn-solid-lg {
+		margin-bottom: 0;
+		margin-left: 0;
+		outline: none;
+	}
+
+	.header-frame {
+		height: 5.5rem;
+	}
+
+
+
+	/* Header */
+	.header .header-content {
+		text-align: left;
+	}
+
+	.header .text-container {
+		margin-top: 4rem;
+		margin-bottom: 0;
+	}
+
+	.header .image-container {
+		position: relative;
+		margin-top: 3rem;
+	}
+	
+	.header .image-container .img-wrapper {
+		position: absolute;
+		display: block;
+		width: 470px;
+	}
+
+	.header-frame {
+		height: 8rem;
+	}
+	/* end of header */
+
+
+
+	/* Header */
+	.header .header-content {
+		padding-top: 1rem;
+		padding-bottom: 18rem;
+	}
+
+	.header .text-container {
+		margin-top: 5.5rem;
+		margin-right: 0.5rem;
+	}
+
+	.header .image-container {
+		margin-top: 1rem;
+		margin-left: 1.5rem;
+	}
+
+	.header .image-container .img-wrapper {
+		width: 630px;
+	}
+
+	.header-frame {
+		height: 9.375rem;
+	}
+	/* end of header */
+	
+.btn{
+	display: inline-block;
+	margin: 1rem 0rem 1rem 0rem;
+	padding: 0.5rem 1.0rem .5rem 1.0rem;
+	border: 0.125rem solid #88bdbc;
+	border-radius: 1rem;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	outline: none;
+
+}
+
+
