@@ -45,18 +45,18 @@
                             <h1>Reduced!</h1>
                             
                             <div class="form-container"  >
-                                <form id="logInForm" data-toggle="validator" data-focus="false">
-                                    <div class="form-group">
-                                        <input type="text" id="textbox" class="form-control-input"  v-model="url">
-                                            
+                                <form onSubmit="return false;">
+                                    <div class="form-group" >
+                                        <input type="text" id="textbox" class="form-control-input"  v-model="url">       
                                     </div>   
                                 </form>
                             </div>
-                            <button class="btn-solid-lg page-scroll" v-on:click="buildurl">Reduce !t</button>
+                            <button class="btn-solid-lg page-scroll" v-on:click="buildurl">Reduce it</button>
                         </div>
                         
-                       <button class="btn" v-for="url in stored">{{url}}
-                          </button>
+                        <p class="bttn" id="copyto" data-clipboard-target="#copyto" v-for="url in stored">
+                           {{url}}
+                        </p>
                         
                         
                          

@@ -26,7 +26,7 @@
 	padding-left: 1.25rem;
 	margin-top: 1.5625rem;
 	border: 1px solid #c4d8dc;
-	border-radius: .5rem;
+	border-radius: .75rem;
 	background-color: #fff;
 	color: #555;
 	outline: none;
@@ -41,13 +41,14 @@
 /*********************/
 
 #textbox:focus {
-	border: 4px solid rgb(255, 63, 63); 
+	border: 4px solid rgb(63, 63, 63); 
 }
 
 #textbox {
 	font-weight: bolder;
-	font-size: larger;
-	
+	font-size: large;	
+	padding: 1rem;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -56,30 +57,23 @@
 }
 
 
-.header .text-container {
-	margin-bottom: 3rem;
-}
-
 .header h1 {
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 	color: #fff;
-	font-size: 2.5rem;
+	font-size: 3.0rem;
 	line-height: 3rem;
 }
 
-.header .p-large {
-	margin-bottom: 2rem;
-	color: #f3f7fd;
-}
 
 .header .btn-solid-lg {
 	margin-right: 0.5rem;
 	margin-bottom: 1.125rem;
 	margin-top: 1.125rem;
-	margin-left: 0.5rem;
+	margin-left: 0rem;
 	border-color: #f3f7fd;
 	background-color: #f3f7fd;
 	color: #242424;
+	outline: none;
 }
 
 .header .btn-solid-lg:hover {
@@ -87,15 +81,6 @@
 	color: #f3f7fd;
 }
 
-.header .btn-outline-lg {
-	border-color: #f3f7fd;
-	color: #f3f7fd;
-}
-
-.header .btn-outline-lg:hover {
-	background-color: #f3f7fd;
-	color: #5f4dee;
-}
 
 .header-frame {
 	margin-top: -1px; /* To remove white margin in FF */
@@ -104,87 +89,25 @@
 }
 
 
-
-
-
-	/* Header */
-	.header .text-container {
-		margin-bottom: 4rem;
-	}
-
-	.header h1 {
-		font-size: 3.5rem;
-		line-height: 4.125rem;
-	}
-
-	.header .btn-solid-lg {
-		margin-bottom: 0;
-		margin-left: 0;
-		outline: none;
-	}
-
-	.header-frame {
-		height: 5.5rem;
-	}
-
-
-
-	/* Header */
-	.header .header-content {
-		text-align: left;
-	}
-
-	.header .text-container {
-		margin-top: 4rem;
-		margin-bottom: 0;
-	}
-
-	.header .image-container {
-		position: relative;
-		margin-top: 3rem;
-	}
-	
-	.header .image-container .img-wrapper {
-		position: absolute;
-		display: block;
-		width: 470px;
-	}
-
-	.header-frame {
-		height: 8rem;
-	}
-	/* end of header */
-
-
-
 	/* Header */
 	.header .header-content {
 		padding-top: 1rem;
-		padding-bottom: 18rem;
+		padding-bottom: 10rem;
 	}
 
 	.header .text-container {
 		margin-top: 5.5rem;
 		margin-right: 0.5rem;
-	}
-
-	.header .image-container {
-		margin-top: 1rem;
-		margin-left: 1.5rem;
-	}
-
-	.header .image-container .img-wrapper {
-		width: 630px;
-	}
+	}	
 
 	.header-frame {
 		height: 9.375rem;
 	}
 	/* end of header */
 	
-.btn{
-	display: inline-block;
-	margin: 1rem 0rem 1rem 0rem;
+.bttn{
+	
+	margin: 2rem 0rem 1rem 0rem;
 	padding: 0.5rem 1.0rem .5rem 1.0rem;
 	border: 0.125rem solid #fff;
 	border-radius: 1rem;
@@ -193,7 +116,10 @@
 	text-decoration: none;
 	transition: all 0.2s;
 	outline: none;
+}
 
+.bttn:hover{
+	border: 2px solid rgb(63, 63, 63); 
 }
 
 
