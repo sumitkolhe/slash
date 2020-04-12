@@ -122,10 +122,6 @@
 	border: 2px solid rgb(63, 63, 63); 
 }
 
-
-
-
-
 #foot{
 	position: relative;
 	left: 0;
@@ -141,6 +137,7 @@
 
 .reduceitbtn{
 	-webkit-appearance: none;
+	-moz-appearance: none;
     display: inline-block;
 	padding: 1.0rem 2.0rem 1.0rem 2.0rem;
 	border: 0.125rem solid #ffffff;
@@ -155,13 +152,13 @@
 
 .reduceitbtn:focus {
 	outline: 0;
-	-webkit-appearance: none;
+	
 	}
 
 .reduceitbtn:hover{
   background-color:#f55;
   color:#ffffff;
-  -webkit-appearance: none;
+ 
 
 }
 
