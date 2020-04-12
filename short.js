@@ -1,6 +1,7 @@
 const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b"
 new ClipboardJS('#copyto');
 
+
 new Vue({
     el: '#app',
 
@@ -12,10 +13,13 @@ new Vue({
         fixedurl:'',
         stored:[],
         reduced:window.location.href,
-        windowurl:''
-        
+        windowurl:'',
+        checkvar:false
         
     },
+
+   
+
 
     mounted(){
 
@@ -34,9 +38,12 @@ new Vue({
     },
 
     methods : {
+       
 
         buildurl(url){
+           
             if(this.url!=""){
+            this.checkvar=true
             this.urlhash = Math.random().toString(36).substring(9);
             this.finalurl = this.reduced+"#"+this.urlhash;
             console.log(this.finalurl);
@@ -69,6 +76,7 @@ new Vue({
         else{
             //bad url
             alert("Please Enter a valid URL");
+            this.checkvar=false;
         }
     },
 
@@ -85,9 +93,14 @@ new Vue({
             })
             .finally(() => {
                 this.stored.push(this.finalurl);
+                this.checkvar=false;
             });
             
         }
+
+
    
     }
+
+
 });

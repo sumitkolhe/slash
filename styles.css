@@ -30,8 +30,8 @@
 	background-color: #fff;
 	color: #555;
 	outline: none;
-	font: 400 0.875rem/1.875rem "Open Sans", sans-serif;
-	transition: all 0.2s;
+	transition: all 0.3s ease;
+  	font-family: 'Montserrat', sans-serif;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
 
@@ -122,4 +122,76 @@
 	border: 2px solid rgb(63, 63, 63); 
 }
 
+
+
+
+
+#foot{
+	position: relative;
+	left: 0;
+	bottom: -3.0rem;
+	width: 100%;
+	background-color: white;
+	color: black;
+	text-align: center;
+	font-weight: bolder;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+.reduceitbtn{
+	-webkit-appearance: none;
+    display: inline-block;
+	padding: 1.0rem 2.0rem 1.0rem 2.0rem;
+	border: 0.125rem solid #ffffff;
+	border-radius: 2rem;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	outline: none;
+}
+
+.reduceitbtn:focus {
+	outline: 0;
+	-webkit-appearance: none;
+	}
+
+.reduceitbtn:hover{
+  background-color:#f55;
+  color:#ffffff;
+  -webkit-appearance: none;
+
+}
+
+.loading{
+  font-size:0;
+  width:30px;
+  height:30px;
+
+  border-radius:15px;
+  padding:0;
+  border:3px solid #FFFFFF;
+  border-bottom:3px solid rgba(255,255,255,0.0);
+  border-left:3px solid rgba(255,255,255,0.0);
+  background-color:transparent !important;
+  animation-name: rotateAnimation;
+  -webkit-animation-name: wk-rotateAnimation;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes rotateAnimation {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes wk-rotateAnimation {
+    0%   {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
 
