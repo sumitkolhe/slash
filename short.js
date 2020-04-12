@@ -21,7 +21,7 @@ new Vue({
 
             if(window.location.hash!="" ){
                 windowurl = window.location.hash;
-               windowurl = windowurl.replace('#','');
+               windowurl = windowurl.substring(1);
                 console.log(endpoint+'?q=hash:'+windowurl);
                 axios.get(endpoint+'?q=hash:'+windowurl)
             .then(function(response){
@@ -38,7 +38,7 @@ new Vue({
         buildurl(url){
             if(this.url!=""){
             this.urlhash = Math.random().toString(36).substring(9);
-            this.finalurl = this.reduced+"/#"+this.urlhash;
+            this.finalurl = this.reduced+"#"+this.urlhash;
             console.log(this.finalurl);
             this.longurl=this.checkurl(this.url);
             this.posturl(this.urlhash,this.longurl)
