@@ -13,7 +13,7 @@ new Vue({
         finalurl:'',
         fixedurl:'',
         stored:[],
-        reduced:window.location.hostname,
+        reduced:window.location.href,
         windowurl:''
         
         
