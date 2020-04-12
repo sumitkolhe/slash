@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="Reduced.me is an Open-Source minimilastic URL shortner focusing on privacy.">
+    <meta name="author" content="Sumit kolhe">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -27,6 +27,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
@@ -45,18 +46,21 @@
                             <h1>Reduced!</h1>
                             
                             <div class="form-container"  >
-                                <form id="logInForm" data-toggle="validator" data-focus="false">
-                                    <div class="form-group">
-                                        <input type="text" id="textbox" class="form-control-input"  v-model="url">
-                                            
+                                <form onSubmit="return false;">
+                                    <div class="form-group" >
+                                        <input type="text" id="textbox" class="form-control-input"  v-model="url">       
                                     </div>   
                                 </form>
                             </div>
-                            <button class="btn-solid-lg page-scroll" v-on:click="buildurl">Reduce !t</button>
+                            <button class="btn-solid-lg page-scroll" v-on:click="buildurl">Reduce it</button>
                         </div>
                         
-                       <button class="btn" v-for="url in stored">{{url}}
-                          </button>
+                        <p class="bttn" id="copyto" data-clipboard-target="#copyto" v-for="url in stored">
+                           {{url}}
+                           <button  class="btnn" onclick="copyToClipboard('#copyto')">copy url</button>
+                        </p>
+                        
+
                         
                         
                          
