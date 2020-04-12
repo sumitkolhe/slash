@@ -27,7 +27,7 @@ new Vue({
             .then(function(response){
             var redirecturl = response.data[0].link;
             console.log(redirecturl);
-           window.location.href= redirecturl;
+           window.location= redirecturl;
             });                
 
             }
@@ -40,22 +40,35 @@ new Vue({
             this.urlhash = Math.random().toString(36).substring(9);
             this.finalurl = this.reduced+"#"+this.urlhash;
             console.log(this.finalurl);
-            this.longurl=this.checkurl(this.url);
-            this.posturl(this.urlhash,this.longurl)
-            console.log(this.longurl);
+            this.checkurl(this.url)
            
             }
         },
 
 
         checkurl(url){  
-            var pattern = /(http|https|ftp):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/
-        if (pattern.test(this.url)) {
-            return this.url;
+            var fullpattern = /(?:(?:https?|ftp|file):\/\/|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/igm;
+            var halfpattern = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm;
+            if (fullpattern.test(this.url)) {
+            //return this.url;
+            //all correct including http and domain
+            this.longurl=this.url;
+            this.posturl(this.urlhash,this.longurl)
+            console.log(this.longurl);
+
         } 
-        else{
+        else if(halfpattern.test(this.url)){
         
-            return "http://"+this.url;
+            //return "http://"+this.url;
+            //domain correct http not present
+            this.longurl="http://"+this.url;
+            console.log(this.longurl);
+            this.posturl(this.urlhash,this.longurl)
+            
+        }
+        else{
+            //bad url
+            alert("Please Enter a valid URL");
         }
     },
 
