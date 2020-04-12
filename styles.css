@@ -2,7 +2,10 @@
 /******************************/
 /*     01. General Styles     */
 /******************************/
-
+html{
+	position:relative; 
+	min-height: 100%;
+  }
 
 .btn-solid-lg {
 	display: inline-block;
@@ -65,35 +68,13 @@
 }
 
 
-.header .btn-solid-lg {
-	margin-right: 0.5rem;
-	margin-bottom: 1.125rem;
-	margin-top: 1.125rem;
-	margin-left: 0rem;
-	border-color: #f3f7fd;
-	background-color: #f3f7fd;
-	color: #242424;
-	outline: none;
-}
-
-.header .btn-solid-lg:hover {
-	background: transparent;
-	color: #f3f7fd;
-}
-
-
 .header-frame {
 	margin-top: -1px; /* To remove white margin in FF */
 	width: 100%;
 	height: 2.25rem;
 }
-
-
 	/* Header */
-	.header .header-content {
-		padding-top: 1rem;
-		padding-bottom: 10rem;
-	}
+
 
 	.header .text-container {
 		margin-top: 5.5rem;
@@ -122,16 +103,25 @@
 	border: 2px solid rgb(63, 63, 63); 
 }
 
-#foot{
-	position: relative;
+.foot{
+	margin-top: 2rem;
+	position: absolute;
 	left: 0;
-	bottom: -3.0rem;
+	right: 0;
+	bottom: 0;
+	height: 2rem;
 	width: 100%;
+	overflow: hidden;
 	background-color: white;
 	color: black;
 	text-align: center;
 	font-weight: bolder;
 	font-family: 'Montserrat', sans-serif;
+	
+}
+
+.footerpad{
+	margin:0rem;
 	
 }
 
@@ -175,10 +165,10 @@
   background-color:transparent !important;
   animation-name: rotateAnimation;
   -webkit-animation-name: wk-rotateAnimation;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
