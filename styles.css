@@ -26,7 +26,7 @@
 	padding-left: 1.25rem;
 	margin-top: 1.5625rem;
 	border: 1px solid #c4d8dc;
-	border-radius: .3rem;
+	border-radius: .5rem;
 	background-color: #fff;
 	color: #555;
 	outline: none;
@@ -39,8 +39,19 @@
 /*********************/
 /*    04. Header     */
 /*********************/
+
+#textbox:focus {
+	border: 4px solid rgb(255, 63, 63); 
+}
+
+#textbox {
+	font-weight: bolder;
+	font-size: larger;
+	
+}
+
 .header {
-	background-color: #34495e;
+	background-color: #F55;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -175,7 +186,7 @@
 	display: inline-block;
 	margin: 1rem 0rem 1rem 0rem;
 	padding: 0.5rem 1.0rem .5rem 1.0rem;
-	border: 0.125rem solid #88bdbc;
+	border: 0.125rem solid #fff;
 	border-radius: 1rem;
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
