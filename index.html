@@ -54,8 +54,10 @@
                                     </div>   
                                 </form>
                             </div>
+                            <div class="reduce">
                             <button class="reduceitbtn" v-bind:class="{loading:checkvar}"  v-on:click="buildurl">Reduce it</button>
-                        </div>
+                        
+                        </div></div>
                         
                         <p class="bttn" id="copyto" data-clipboard-target="#copyto" v-for="url in stored">
                            {{url}}

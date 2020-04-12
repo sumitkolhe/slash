@@ -5,6 +5,8 @@
 html{
 	position:relative; 
 	min-height: 100%;
+	transition: all 0.5s ease;
+  	font-family: 'Montserrat', sans-serif;
   }
 
 .btn-solid-lg {
@@ -33,8 +35,7 @@ html{
 	background-color: #fff;
 	color: #555;
 	outline: none;
-	transition: all 0.3s ease;
-  	font-family: 'Montserrat', sans-serif;
+	
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
 
@@ -120,11 +121,6 @@ html{
 	
 }
 
-.footerpad{
-	margin:0rem;
-	
-}
-
 .reduceitbtn{
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -136,7 +132,7 @@ html{
 	color: #000000;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-	transition: all 0.2s;
+	transition: all 0.4s ease;
 	outline: none;
 }
 
@@ -148,18 +144,16 @@ html{
 .reduceitbtn:hover{
   background-color:#f55;
   color:#ffffff;
- 
-
 }
 
 .loading{
+position: relative;
   font-size:0;
   width:30px;
   height:30px;
-
   border-radius:15px;
   padding:0;
-  border:3px solid #FFFFFF;
+  border:4px solid #FFFFFF;
   border-bottom:3px solid rgba(255,255,255,0.0);
   border-left:3px solid rgba(255,255,255,0.0);
   background-color:transparent !important;
