@@ -14,7 +14,7 @@ html{
 
 .textbox{
 	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
-	width: 100%;
+	width: 70%;
 	padding-top: .5625rem;
 	padding-bottom: 0.5625rem;
 	padding-left: 1.25rem;
@@ -155,4 +155,9 @@ position: relative;
     0%   {-webkit-transform: rotate(0deg);}
     100% {-webkit-transform: rotate(360deg);}
 }
+.svg11{
+	text-align:right;
+	margin-right: 5%;
+
+  }
 
