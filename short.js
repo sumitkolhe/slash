@@ -11,7 +11,7 @@ new Vue({
         urlhash:'',
         finalurl:'',
         fixedurl:'',
-        stored:[],
+        stored:null,
         reduced:window.location.href,
         windowurl:'',
         checkvar:false
@@ -92,7 +92,7 @@ new Vue({
 
             })
             .finally(() => {
-                this.stored.push(this.finalurl);
+                this.stored=this.finalurl;
                 this.checkvar=false;
             });
             
