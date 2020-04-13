@@ -1,6 +1,5 @@
 const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b"
-
-
+new ClipboardJS('#copyto');
 
 
 new Vue({
@@ -12,52 +11,72 @@ new Vue({
         urlhash:'',
         finalurl:'',
         fixedurl:'',
-        stored:[],
-        reduced:window.location.hostname,
-        windowurl:''
-        
+        stored:null,
+        reduced:window.location.href,
+        windowurl:'',
+        checkvar:false
         
     },
+
+   
+
 
     mounted(){
 
             if(window.location.hash!="" ){
                 windowurl = window.location.hash;
-               windowurl = windowurl.replace('#','');
+               windowurl = windowurl.substring(1);
                 console.log(endpoint+'?q=hash:'+windowurl);
                 axios.get(endpoint+'?q=hash:'+windowurl)
             .then(function(response){
             var redirecturl = response.data[0].link;
             console.log(redirecturl);
-           window.location.assign(redirecturl);
+           window.location= redirecturl;
             });                
 
             }
     },
 
     methods : {
+       
 
         buildurl(url){
+           
             if(this.url!=""){
+            this.checkvar=true
             this.urlhash = Math.random().toString(36).substring(9);
-            this.finalurl = this.reduced+"/#"+this.urlhash;
+            this.finalurl = this.reduced+"#"+this.urlhash;
             console.log(this.finalurl);
-            this.longurl=this.checkurl();
-            this.posturl(this.urlhash,this.longurl)
-
+            this.checkurl(this.url)
            
             }
         },
 
 
         checkurl(url){  
-            var pattern = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
-        if (pattern.test(this.url)) {
-            return this.url;
+            var fullpattern = /(?:(?:https?|ftp|file):\/\/|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/igm;
+            var halfpattern = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm;
+            if (fullpattern.test(this.url)) {
+            //return this.url;
+            //all correct including http and domain
+            this.longurl=this.url;
+            this.posturl(this.urlhash,this.longurl)
+            console.log(this.longurl);
+
         } 
-        else{
+        else if(halfpattern.test(this.url)){
         
-            return "http://"+this.url;
+            //return "http://"+this.url;
+            //domain correct http not present
+            this.longurl="http://"+this.url;
+            console.log(this.longurl);
+            this.posturl(this.urlhash,this.longurl)
+            
+        }
+        else{
+            //bad url
+            alert("Please Enter a valid URL");
+            this.checkvar=false;
         }
     },
 
@@ -73,10 +92,15 @@ new Vue({
 
             })
             .finally(() => {
-                this.stored.push(this.finalurl);
+                this.stored=this.finalurl;
+                this.checkvar=false;
             });
             
         }
+
+
    
     }
+
+
 });
