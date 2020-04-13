@@ -6,24 +6,13 @@ html{
 	position:relative; 
 	min-height: 100%;
 	transition: all 0.5s ease;
-  	font-family: 'Montserrat', sans-serif;
+	  font-family: 'Montserrat', sans-serif;
+	
   }
 
-.btn-solid-lg {
-	display: inline-block;
-	padding: 1.0rem 2.0rem 1.0rem 2.0rem;
-	border: 0.125rem solid #88bdbc;
-	border-radius: 2rem;
-	background-color: #88bdbc;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	transition: all 0.2s;
-	outline: none;
-}
 
-.form-control-input,
-.form-control-select {
+
+.textbox{
 	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
 	width: 100%;
 	padding-top: .5625rem;
@@ -32,38 +21,30 @@ html{
 	margin-top: 1.5625rem;
 	border: 1px solid #c4d8dc;
 	border-radius: .75rem;
-	background-color: #fff;
-	color: #555;
 	outline: none;
+	font-weight: bolder;
+	font-size: large;	
+	padding: 1rem;
+	font-family: 'Montserrat', sans-serif;
 	
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
 
 
-/*********************/
-/*    04. Header     */
-/*********************/
-
-#textbox:focus {
+.textbox:focus {
 	border: 4px solid rgb(63, 63, 63); 
 }
 
-#textbox {
-	font-weight: bolder;
-	font-size: large;	
-	padding: 1rem;
-	font-family: 'Montserrat', sans-serif;
-}
 
 .header {
-	background-color: #F55;
 	font-family: 'Montserrat', sans-serif;
+	background: none !important;
+
 }
 
 
 .header h1 {
 	margin-bottom: 1.5rem;
-	color: #fff;
 	font-size: 3.0rem;
 	line-height: 3rem;
 }
@@ -78,7 +59,7 @@ html{
 
 
 	.header .text-container {
-		margin-top: 5.5rem;
+		padding-top: 6.0rem;
 		margin-right: 0.5rem;
 	}	
 
@@ -91,9 +72,9 @@ html{
 	
 	margin: 2rem 0rem 1rem 0rem;
 	padding: 0.5rem 1.0rem .5rem 1.0rem;
-	border: 0.125rem solid #fff;
+	border: 0.125rem solid #000000;
 	border-radius: 1rem;
-	color: #fff;
+	color: #000000;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -113,7 +94,7 @@ html{
 	height: 2rem;
 	width: 100%;
 	overflow: hidden;
-	background-color: white;
+	background-color: transparent;
 	color: black;
 	text-align: center;
 	font-weight: bolder;
@@ -126,7 +107,7 @@ html{
 	-moz-appearance: none;
     display: inline-block;
 	padding: 1.0rem 2.0rem 1.0rem 2.0rem;
-	border: 0.125rem solid #ffffff;
+	border: 0.200rem solid #000000;
 	border-radius: 2rem;
 	background-color: #ffffff;
 	color: #000000;
@@ -138,11 +119,10 @@ html{
 
 .reduceitbtn:focus {
 	outline: 0;
-	
 	}
 
 .reduceitbtn:hover{
-  background-color:#f55;
+  background-color:#000000;
   color:#ffffff;
 }
 
@@ -153,7 +133,7 @@ position: relative;
   height:30px;
   border-radius:15px;
   padding:0;
-  border:4px solid #FFFFFF;
+  border:4px solid #000000;
   border-bottom:3px solid rgba(255,255,255,0.0);
   border-left:3px solid rgba(255,255,255,0.0);
   background-color:transparent !important;
