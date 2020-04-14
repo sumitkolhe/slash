@@ -28,7 +28,6 @@ new Vue({
             this.checkvar=true
             this.urlhash = Math.random().toString(36).substring(9);
             this.finalurl = this.reduced+"#"+this.urlhash;
-            console.log(this.finalurl);
             this.checkurl(this.url)
            
             }
@@ -43,7 +42,6 @@ new Vue({
             //all correct including http and domain
             this.longurl=this.url;
             this.posturl(this.urlhash,this.longurl)
-            console.log(this.longurl);
 
         } 
         else if(halfpattern.test(this.url)){
@@ -51,7 +49,6 @@ new Vue({
             //return "http://"+this.url;
             //domain correct http not present
             this.longurl="http://"+this.url;
-            console.log(this.longurl);
             this.posturl(this.urlhash,this.longurl)
             
         }
@@ -70,7 +67,6 @@ new Vue({
                 
             })
             .then(response=>{
-                console.log(response);
 
             })
             .finally(() => {
