@@ -10,8 +10,6 @@ html{
 	
   }
 
-
-
 .textbox{
 	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
 	width: 70%;
@@ -38,7 +36,8 @@ html{
 
 .header {
 	font-family: 'Montserrat', sans-serif;
-	background: none !important;
+	background-image: url(Group\ 5.svg), none;
+
 
 }
 
@@ -59,8 +58,9 @@ html{
 
 
 	.header .text-container {
-		padding-top: 6.0rem;
+		padding-top: 2rem;
 		margin-right: 0.5rem;
+		padding-bottom: 14rem;
 	}	
 
 	.header-frame {
@@ -69,10 +69,10 @@ html{
 	/* end of header */
 	
 .bttn{
-	
+	width: 50%;
 	margin: 2rem 0rem 1rem 0rem;
 	padding: 0.5rem 1.0rem .5rem 1.0rem;
-	border: 0.125rem solid #000000;
+	border: 0.125rem solid #D3D3D3;
 	border-radius: 1rem;
 	color: #000000;
 	font-family: 'Montserrat', sans-serif;
@@ -107,7 +107,7 @@ html{
 	-moz-appearance: none;
     display: inline-block;
 	padding: 1.0rem 2.0rem 1.0rem 2.0rem;
-	border: 0.200rem solid #000000;
+	border: 0.200rem solid #D3D3D3;
 	border-radius: 2rem;
 	background-color: #ffffff;
 	color: #000000;
@@ -156,8 +156,9 @@ position: relative;
     100% {-webkit-transform: rotate(360deg);}
 }
 .svg11{
-	text-align:right;
-	margin-right: 5%;
 
+	text-align: right;
+	margin-right: 20px;
+	
   }
 
