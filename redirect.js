@@ -1,5 +1,4 @@
-const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b";
-
+const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b"
 
 new Vue({
     mounted(){
