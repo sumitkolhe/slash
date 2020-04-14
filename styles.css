@@ -24,17 +24,36 @@ body{
     box-sizing: border-box;
 }
 
-.ccontainer{
+.container{
 	padding-left: 21%;
 	padding-right: 21%;
 }
 
 @media only screen and (max-width: 480px) {
-	.ccontainer{
+	.container{
 		padding-left: 10%;
 		padding-right: 10%;
 	}
 }
+
+.header {
+	font-family: 'Montserrat', sans-serif;
+	background: none !important;
+	display: block;
+}
+
+.header h1 {
+	margin-bottom: 2rem;
+	font-size: 3.0rem;
+	line-height: 3rem;
+}
+
+
+.text-container {
+	padding-top: 5.0rem;
+	margin-right: 0.5rem;		
+}
+
 .textbox{
 	display: block;
 	width: 100%;
@@ -42,8 +61,8 @@ body{
 	padding-bottom: 0.5625rem;
 	padding-left: 1.25rem;
 	margin-top: 1.5625rem;
-	margin-bottom: 1rem;
-	border: 1px solid #c4d8dc;
+	margin-bottom: 1.5rem;
+	border: 0.100rem solid #757575;
 	border-radius: .75rem;
 	outline: none;
 	font-weight: bolder;
@@ -56,26 +75,35 @@ body{
 
 .textbox:focus {
 	border: 4px solid rgb(63, 63, 63); 
-}
-
-.header {
-	font-family: 'Montserrat', sans-serif;
-	background: none !important;
-	display: block;
-}
-
-.header h1 {
-	margin-bottom: 1.5rem;
-	font-size: 3.0rem;
-	line-height: 3rem;
-}
-
-.header .text-container {
-	padding-top: 4.0rem;
-	margin-right: 0.5rem;		
 }	
+
+.reducebtn{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    display: inline-block;
+	padding: 1.0rem 1.5rem 1.0rem 1.5rem;
+	border: 0.220rem solid #000000;
+	border-radius: 2rem;
+	font-size: larger;
+	background-color: #ffffff;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all 0.4s ease;
+	outline: none;
+}
+
+.reducebtn:focus {
+	outline: 0;
+	}
+
+.reducebtn:hover{
+  background-color:#000000;
+  color:#ffffff;
+}
 	
-.bttn{
+
+.shorturlfield{
 	margin: 2rem 0rem 1rem 0rem;
 	padding: 0.5rem 1.0rem .5rem 1.0rem;
 	border: 0.200rem solid #4caf50;
@@ -88,7 +116,7 @@ body{
 	width: fit-content;
 }
 
-.bttn:hover{
+.shorturlfield:hover{
 	border: 0.200rem solid rgb(63, 63, 63); 
 }
 
@@ -122,31 +150,6 @@ body{
 	display: block;
 }
 
-.reduceitbtn{
-	-webkit-appearance: none;
-	-moz-appearance: none;
-    display: inline-block;
-	padding: 1.0rem 1.5rem 1.0rem 1.5rem;
-	border: 0.200rem solid #000000;
-	border-radius: 2rem;
-	font-size: larger;
-	background-color: #ffffff;
-	color: #000000;
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	transition: all 0.4s ease;
-	outline: none;
-}
-
-.reduceitbtn:focus {
-	outline: 0;
-	}
-
-.reduceitbtn:hover{
-  background-color:#000000;
-  color:#ffffff;
-}
-
 .loading{
 position: relative;
   font-size:0;
@@ -160,10 +163,10 @@ position: relative;
   background-color:transparent !important;
   animation-name: rotateAnimation;
   -webkit-animation-name: wk-rotateAnimation;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
-  animation-delay: 0.3s;
-  -webkit-animation-delay: 0.3s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }

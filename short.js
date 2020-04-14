@@ -1,6 +1,5 @@
-const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b"
-new ClipboardJS('#copyto');
 
+new ClipboardJS('#copyto');
 
 new Vue({
     el: '#app',
@@ -17,25 +16,6 @@ new Vue({
         windowurl:'',
         checkvar:false
         
-    },
-
-   
-
-
-    mounted(){
-
-            if(window.location.hash!="" ){
-                windowurl = window.location.hash;
-               windowurl = windowurl.substring(1);
-                console.log(endpoint+'?q=hash:'+windowurl);
-                axios.get(endpoint+'?q=hash:'+windowurl)
-            .then(function(response){
-            var redirecturl = response.data[0].link;
-            console.log(redirecturl);
-           window.location= redirecturl;
-            });                
-
-            }
     },
 
     methods : {
