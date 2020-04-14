@@ -1,13 +1,9 @@
-const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b";
-      
+
+const endpoint = 'https://jsonbox.io/demobox_6d9e326c183fde7b';
 var windowurl = window.location.hash.substr(1);
-    if(window.location.hash!="" ){
-        
-        console.log(endpoint+'?q=hash:'+windowurl);
-        axios.get(endpoint+'?q=hash:'+windowurl)
-        .then(function(response){
-        var redirecturl = response.data[0].link;
-        console.log(redirecturl);
-        window.location= redirecturl;
-        });                
-        }
+
+if (Window.location.hash!=""){     
+    let response = await fetch(endpoint+'?q=hash:'+windowurl);
+    let data = await response.json(); // read response body and parse as JSON
+    window.location.href=data[0].link;
+}
