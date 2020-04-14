@@ -36,7 +36,10 @@ html{
 
 .header {
 	font-family: 'Montserrat', sans-serif;
+	/*background-image:url(Group\ 7.png);*/
+	
 	background-image: url(Group\ 5.svg), none;
+	background-repeat: no-repeat;
 
 
 }
@@ -58,9 +61,10 @@ html{
 
 
 	.header .text-container {
+		
 		padding-top: 2rem;
 		margin-right: 0.5rem;
-		padding-bottom: 14rem;
+		padding-bottom: 30%;
 	}	
 
 	.header-frame {
@@ -158,7 +162,7 @@ position: relative;
 .svg11{
 
 	text-align: right;
-	margin-right: 20px;
+
 	
   }
 
