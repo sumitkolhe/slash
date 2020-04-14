@@ -1,8 +1,5 @@
-const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b"
-
-new Vue({
-    mounted(){
-        
+const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b";
+      
     if(window.location.hash!="" ){
         var windowurl = window.location.hash.substring(1);
         console.log(endpoint+'?q=hash:'+windowurl);
@@ -13,6 +10,3 @@ new Vue({
         window.location= redirecturl;
         });                
         }
-    }
-})
-
