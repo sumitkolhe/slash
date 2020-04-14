@@ -1,7 +1,3 @@
-
-/******************************/
-/*     01. General Styles     */
-/******************************/
 html{
 	position:relative; 
 	min-height: 100%;
@@ -16,7 +12,6 @@ html{
 
 body{
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -29,12 +24,10 @@ body{
     box-sizing: border-box;
 }
 
-
 .ccontainer{
 	padding-left: 21%;
 	padding-right: 21%;
 }
-
 
 @media only screen and (max-width: 480px) {
 	.ccontainer{
@@ -43,7 +36,7 @@ body{
 	}
 }
 .textbox{
-	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
+	display: block;
 	width: 100%;
 	padding-top: .5625rem;
 	padding-bottom: 0.5625rem;
@@ -58,23 +51,18 @@ body{
 	padding: 1rem;
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.5rem;
-	
-	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+	-webkit-appearance: none;
 }
-
 
 .textbox:focus {
 	border: 4px solid rgb(63, 63, 63); 
 }
 
-
 .header {
 	font-family: 'Montserrat', sans-serif;
 	background: none !important;
 	display: block;
-
 }
-
 
 .header h1 {
 	margin-bottom: 1.5rem;
@@ -82,23 +70,10 @@ body{
 	line-height: 3rem;
 }
 
-
-.header-frame {
-	margin-top: -1px; /* To remove white margin in FF */
-	width: 100%;
-	height: 2.25rem;
-}
-	/* Header */
-
-
-	.header .text-container {
-		padding-top: 4.0rem;
-		margin-right: 0.5rem;
-		
-	}	
-
-	
-	/* end of header */
+.header .text-container {
+	padding-top: 4.0rem;
+	margin-right: 0.5rem;		
+}	
 	
 .bttn{
 	margin: 2rem 0rem 1rem 0rem;
@@ -118,7 +93,6 @@ body{
 }
 
 .badurl{
-	
 	margin: 2rem 0rem 1rem 0rem;
 	padding: 0.5rem 1.0rem .5rem 1.0rem;
 	border: 0.200rem solid #f55;
@@ -146,7 +120,6 @@ body{
 	font-weight: bolder;
 	font-family: 'Montserrat', sans-serif;
 	display: block;
-	
 }
 
 .reduceitbtn{
