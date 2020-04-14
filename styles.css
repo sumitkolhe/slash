@@ -31,8 +31,8 @@ body{
 
 @media only screen and (max-width: 480px) {
 	.container{
-		padding-left: 10%;
-		padding-right: 10%;
+		padding-left: 6%;
+		padding-right: 6%;
 	}
 }
 
