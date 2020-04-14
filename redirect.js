@@ -8,6 +8,6 @@ var windowurl = window.location.hash.substr(1);
         .then(function(response){
         var redirecturl = response.data[0].link;
         console.log(redirecturl);
-        window.location.href= redirecturl;
+        window.location= redirecturl;
         });                
         }
