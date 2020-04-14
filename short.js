@@ -88,16 +88,3 @@ new Vue({
 });
 
 
-
-
-var windowurl = window.location.hash.substr(1);
-    if(window.location.hash!="" ){
-        
-        console.log(endpoint+'?q=hash:'+windowurl);
-        fetch(endpoint+'?q=hash:'+windowurl)
-        .then(function(response){
-        var redirecturl = response.data[0].link;
-        console.log(redirecturl);
-        window.location.href= redirecturl;
-        });                
-        }
