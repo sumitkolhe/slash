@@ -12,6 +12,7 @@ new Vue({
         finalurl:'',
         fixedurl:'',
         stored:null,
+        badurl:false,
         reduced:window.location.href,
         windowurl:'',
         checkvar:false
@@ -41,6 +42,7 @@ new Vue({
        
 
         buildurl(url){
+            this.badurl=false;
            
             if(this.url!=""){
             this.checkvar=true
@@ -75,7 +77,7 @@ new Vue({
         }
         else{
             //bad url
-            alert("Please Enter a valid URL");
+            this.badurl=true;
             this.checkvar=false;
         }
     },

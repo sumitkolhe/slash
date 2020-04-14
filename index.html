@@ -22,9 +22,9 @@
     <title>Reduced - An open-source free URL shortener</title>
     <link rel="shortcut icon" type="image/png" href="/fav.png"/>
     <!-- Styles -->
-    <link href="bootstrap.css" rel="stylesheet">
+
     <link href="styles.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
@@ -32,13 +32,13 @@
      <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
-<body >
+<body>
   
     <!-- Header -->
     <header id="header" class="header">
         
         <div class="header-content" id="app">
-            <div class="container">
+            <div class="ccontainer">
                 
                         
                         <div class="text-container">
@@ -56,6 +56,8 @@
                         
                             </div>
                     </div>
+
+                    <p class="badurl" v-show="badurl==true">Please enter a valid url</p>
                         
                         <p class="bttn" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null">
                            {{stored}}

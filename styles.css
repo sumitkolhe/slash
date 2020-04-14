@@ -6,12 +6,42 @@ html{
 	position:relative; 
 	min-height: 100%;
 	transition: all 0.5s ease;
-	  font-family: 'Montserrat', sans-serif;
-	
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;	
+	font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 
+.ccontainer{
+	padding-left: 21%;
+	padding-right: 21%;
+}
+
+
+@media only screen and (max-width: 480px) {
+	.ccontainer{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
 .textbox{
 	display: block; /* needed for proper display of the label in Firefox, IE, Edge */
 	width: 100%;
@@ -19,6 +49,7 @@ html{
 	padding-bottom: 0.5625rem;
 	padding-left: 1.25rem;
 	margin-top: 1.5625rem;
+	margin-bottom: 1rem;
 	border: 1px solid #c4d8dc;
 	border-radius: .75rem;
 	outline: none;
@@ -26,6 +57,7 @@ html{
 	font-size: large;	
 	padding: 1rem;
 	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5rem;
 	
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
@@ -39,6 +71,7 @@ html{
 .header {
 	font-family: 'Montserrat', sans-serif;
 	background: none !important;
+	display: block;
 
 }
 
@@ -59,30 +92,43 @@ html{
 
 
 	.header .text-container {
-		padding-top: 6.0rem;
+		padding-top: 4.0rem;
 		margin-right: 0.5rem;
+		
 	}	
 
-	.header-frame {
-		height: 9.375rem;
-	}
+	
 	/* end of header */
 	
 .bttn{
-	
 	margin: 2rem 0rem 1rem 0rem;
 	padding: 0.5rem 1.0rem .5rem 1.0rem;
-	border: 0.125rem solid #000000;
+	border: 0.200rem solid #4caf50;
 	border-radius: 1rem;
 	color: #000000;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 	outline: none;
+	width: fit-content;
 }
 
 .bttn:hover{
-	border: 2px solid rgb(63, 63, 63); 
+	border: 0.200rem solid rgb(63, 63, 63); 
+}
+
+.badurl{
+	
+	margin: 2rem 0rem 1rem 0rem;
+	padding: 0.5rem 1.0rem .5rem 1.0rem;
+	border: 0.200rem solid #f55;
+	border-radius: 1rem;
+	color: #f55;
+	width: fit-content;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	outline: none;
 }
 
 .foot{
@@ -99,6 +145,7 @@ html{
 	text-align: center;
 	font-weight: bolder;
 	font-family: 'Montserrat', sans-serif;
+	display: block;
 	
 }
 
@@ -106,9 +153,10 @@ html{
 	-webkit-appearance: none;
 	-moz-appearance: none;
     display: inline-block;
-	padding: 1.0rem 2.0rem 1.0rem 2.0rem;
+	padding: 1.0rem 1.5rem 1.0rem 1.5rem;
 	border: 0.200rem solid #000000;
 	border-radius: 2rem;
+	font-size: larger;
 	background-color: #ffffff;
 	color: #000000;
 	font-family: 'Montserrat', sans-serif;
