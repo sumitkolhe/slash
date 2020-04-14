@@ -3,6 +3,7 @@ const endpoint = "https://jsonbox.io/demobox_6d9e326c183fde7b";
 var windowurl = window.location.hash.substr(1);
 
 if (window.location.hash!=""){
+    window.stop();
     
     
 fetch(endpoint+'?q=hash:'+windowurl)
