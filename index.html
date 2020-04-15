@@ -36,18 +36,19 @@
                         <div class="form-container"  >
                             <form onSubmit="return false;">
                                 <div class="form-group" >
-                                    <input type="text" class="textbox" placeholder="Enter long url"  v-model="url">       
+                                    <input type="text" class="textbox" v-on:keyup.enter="buildurl" v-bind:class="{badurl:badurl}" :placeholder="placeholdervalue"  v-model="url">       
                                 </div>   
                             </form>
                         </div>
                         <div class="reduce">
-                            <button class="reducebtn" v-bind:class="{loading:checkvar}"  v-on:click="buildurl">Reduce me</button>
+                            <button class="reducebtn" v-bind:class="{loading:loading}"  v-on:click="buildurl">Reduce me</button>
                         </div>
                 </div>
-                <p class="badurl" v-show="badurl==true">Please enter a valid url</p>
-                    <p class="shorturlfield" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null">
-                        {{stored}}
-                    </p>
+                <div class="shorturl">
+                        <p class="shorturlfield" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null">
+                            {{stored}}
+                        </p>
+                </div>
             </div>
         </div>
     </header>

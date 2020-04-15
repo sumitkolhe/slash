@@ -7,7 +7,7 @@ if (window.location.hash!=""){
     
     
 fetch(endpoint+'?q=hash:'+windowurl)
-.then((resp) => resp.json()) // Transform the data into json
+.then((resp) => resp.json()) 
 .then(function(data) {
     window.location.href=data[0].link;
   })

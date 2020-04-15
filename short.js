@@ -14,7 +14,8 @@ new Vue({
         badurl:false,
         reduced:window.location.href,
         windowurl:'',
-        checkvar:false
+        loading:false,
+        placeholdervalue:'Enter long url'
         
     },
 
@@ -23,9 +24,10 @@ new Vue({
 
         buildurl(url){
             this.badurl=false;
+            this.placeholdervalue='Enter long url';
            
             if(this.url!=""){
-            this.checkvar=true
+            this.loading=true
             this.urlhash = Math.random().toString(36).substring(9);
             this.finalurl = this.reduced+"#"+this.urlhash;
             this.checkurl(this.url)
@@ -55,7 +57,9 @@ new Vue({
         else{
             //bad url
             this.badurl=true;
-            this.checkvar=false;
+            this.url='';
+            this.placeholdervalue='Not a valid url';
+            this.loading=false;
         }
     },
 
@@ -71,7 +75,7 @@ new Vue({
             })
             .finally(() => {
                 this.stored=this.finalurl;
-                this.checkvar=false;
+                this.loading=false;
             });
             
         }

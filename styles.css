@@ -62,7 +62,7 @@ body{
 	padding-left: 1.25rem;
 	margin-top: 1.5625rem;
 	margin-bottom: 1.5rem;
-	border: 0.100rem solid #757575;
+	border: 0.130rem solid #757575;
 	border-radius: .75rem;
 	outline: none;
 	font-weight: bolder;
@@ -71,10 +71,12 @@ body{
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.5rem;
 	-webkit-appearance: none;
+
 }
 
+
 .textbox:focus {
-	border: 4px solid rgb(63, 63, 63); 
+	border: 2px solid rgb(49, 49, 49); 
 }	
 
 .reducebtn{
@@ -82,14 +84,14 @@ body{
 	-moz-appearance: none;
     display: inline-block;
 	padding: 1.0rem 1.5rem 1.0rem 1.5rem;
-	border: 0.220rem solid #000000;
+	border: 0.225rem solid #000000;
 	border-radius: 2rem;
 	font-size: larger;
 	background-color: #ffffff;
 	color: #000000;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-	transition: all 0.4s ease;
+	transition: all 0.5s ease;
 	outline: none;
 }
 
@@ -101,7 +103,7 @@ body{
   background-color:#000000;
   color:#ffffff;
 }
-	
+
 
 .shorturlfield{
 	margin: 2rem 0rem 1rem 0rem;
@@ -121,16 +123,13 @@ body{
 }
 
 .badurl{
-	margin: 2rem 0rem 1rem 0rem;
-	padding: 0.5rem 1.0rem .5rem 1.0rem;
-	border: 0.200rem solid #f55;
-	border-radius: 1rem;
+	border: 0.130rem solid #f55;
 	color: #f55;
-	width: fit-content;
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	transition: all 0.2s;
-	outline: none;
+}
+
+.badurl:focus{
+	border: 0.130rem solid #f55;
+	color: #f55;
 }
 
 .foot{
@@ -141,22 +140,26 @@ body{
 	bottom: 0;
 	height: 2rem;
 	width: 100%;
+	height:3rem;
+	padding-top: .5rem;
+	padding-bottom: 1.5rem;
 	overflow: hidden;
 	background-color: transparent;
 	color: black;
 	text-align: center;
 	font-weight: bolder;
 	font-family: 'Montserrat', sans-serif;
-	display: block;
+	display: inline-block;
 }
 
 .loading{
-position: relative;
+  position: absolute;
   font-size:0;
-  width:30px;
-  height:30px;
-  border-radius:15px;
-  padding:0;
+  width:40px;
+  height:40px;
+  border-radius:20px;
+  padding:0;;
+  color: #ffffff;
   border:4px solid #000000;
   border-bottom:3px solid rgba(255,255,255,0.0);
   border-left:3px solid rgba(255,255,255,0.0);
@@ -169,6 +172,7 @@ position: relative;
   -webkit-animation-delay: 0.2s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+  transition: all .5s;
 }
 
 @keyframes rotateAnimation {
