@@ -124,12 +124,12 @@ body{
 
 .badurl{
 	border: 0.130rem solid #f55;
-	color: #f55;
+
 }
 
 .badurl:focus{
 	border: 0.130rem solid #f55;
-	color: #f55;
+	
 }
 
 .foot{
@@ -143,13 +143,13 @@ body{
 	height:3rem;
 	padding-top: .5rem;
 	padding-bottom: 1.5rem;
-	overflow: hidden;
+	overflow: scroll;
 	background-color: transparent;
 	color: black;
 	text-align: center;
 	font-weight: bolder;
 	font-family: 'Montserrat', sans-serif;
-	display: inline-block;
+	display: block;
 }
 
 .loading{
