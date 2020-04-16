@@ -28,7 +28,7 @@
 </head>
 
 <body> 
-    <div class="container" id="app">
+    <main class="container" id="app">
         <header><h1>Reduced!</h1></header>
         <form onSubmit="return false;">
             <input type="text" class="textbox" v-on:keyup.enter="buildurl" v-bind:class="{badurl:badurl}" :placeholder="placeholdervalue"  v-model="url"> 
@@ -43,7 +43,7 @@
         <footer>
             <p>Made with ❤️ in Pune, India</p>
         </footer>
-    </div> 
+    </main> 
    
    
 <script src="short.js"></script>

@@ -28,7 +28,8 @@ header{
 }
 
 footer{
-    display: flex;
+	display: flex;
+	align-self: center;
 }
 
 form{
