@@ -30,7 +30,7 @@
 <body> 
     <div class="container" id="app">
         <header><h1>Reduced!</h1></header>
-        <form action="#">
+        <form onSubmit="return false;">
             <input type="text" class="textbox" v-on:keyup.enter="buildurl" v-bind:class="{badurl:badurl}" :placeholder="placeholdervalue"  v-model="url"> 
             <button v-bind:class="{loading:loading}"  v-on:click="buildurl">Reduce me</button>
         </form>
