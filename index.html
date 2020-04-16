@@ -28,36 +28,24 @@
 </head>
 
 <body> 
-    <header id="header" class="header"> 
-        <div class="header-content" id="app">
-            <div class="container">       
-                <div class="text-container">
-                    <h1>Reduced!</h1>
-                        <div class="form-container"  >
-                            <form onSubmit="return false;">
-                                <div class="form-group" >
-                                    <input type="text" class="textbox" v-on:keyup.enter="buildurl" v-bind:class="{badurl:badurl}" :placeholder="placeholdervalue"  v-model="url">       
-                                </div>   
-                            </form>
-                        </div>
-                        <div class="reduce">
-                            <button class="reducebtn" v-bind:class="{loading:loading}"  v-on:click="buildurl">Reduce me</button>
-                        </div>
-                </div>
-                <div class="shorturl">
-                        <p class="shorturlfield" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null">
-                            {{stored}}
-                        </p>
-                </div>
-            </div>
+    <div class="container" id="app">
+        <header><h1>Reduced!</h1></header>
+        <form action="#">
+            <input type="text" class="textbox" v-on:keyup.enter="buildurl" v-bind:class="{badurl:badurl}" :placeholder="placeholdervalue"  v-model="url"> 
+            <button v-bind:class="{loading:loading}"  v-on:click="buildurl">Reduce me</button>
+        </form>
+        <div class="shorturl">
+            <p class="shorturlfield" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null">
+                {{stored}}
+            </p>
         </div>
-    </header>
-    <footer class="foot">
-        <div class="footerpad">
-            Made with ❤️ in Pune, India
-        </div>
-    </footer>
-
+        <div class="spacer"></div>
+        <footer>
+            <p>Made with ❤️ in Pune, India</p>
+        </footer>
+    </div> 
+   
+   
 <script src="short.js"></script>
 
 
