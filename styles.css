@@ -7,21 +7,24 @@ body{
     outline: 0;
     margin: 0;
     padding: 0;
-    border: 0;
+	border: 0;
+
     
 }
 
 header{
     display: block;
     padding: 4rem 0rem 0rem 0;
-    font-size: 1.5rem;
+	font-size: 1.5rem;
+	
 }
 
 .container{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 0 21% 0 21%;
+	padding: 0 21% 0 21%;
+	
 }
 
 @media only screen and (max-width: 480px) {
@@ -110,7 +113,8 @@ button:hover{
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	outline: none;
-	width: fit-content; 
+	width: fit-content;
+	position: relative; 
 }
 
 .spacer{
