@@ -24,7 +24,7 @@
     
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-clipboard2/0.3.1/vue-clipboard.min.js"></script>
 </head>
 
 <body> 
@@ -35,10 +35,12 @@
             <button v-bind:class="{loading:loading}"  v-on:click="buildurl">Reduce me</button>
         </form>
         <div class="shorturl">
-            <p class="shorturlfield" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null" onclick="showToast('Link copied')">
+            <p class="shorturlfield" id="copyto" v-if="stored!=null">
                 {{stored}}
             </p>
-            <div id="toast"></div>
+            <button class="copybutton" v-if="stored!=null" v-clipboard:copy="stored" v-clipboard:success="onCopy">Copy</button>
+
+            <div id="toast">Link copied</div>
         </div>
         
         <div class="spacer"></div>

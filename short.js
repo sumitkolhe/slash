@@ -1,5 +1,4 @@
 
-new ClipboardJS('#copyto');
 
 function showToast(text){
     var x=document.getElementById("toast");
@@ -8,6 +7,7 @@ function showToast(text){
     setTimeout(function(){
         x.classList.remove("show");
     },3000);}
+
 
 new Vue({
     el: '#app',
@@ -23,7 +23,7 @@ new Vue({
         reduced:window.location.href,
         windowurl:'',
         loading:false,
-        placeholdervalue:'Enter long url...'
+        placeholdervalue:'Enter long url...',
         
     },
 
@@ -33,7 +33,6 @@ new Vue({
         buildurl(url){
             this.badurl=false;
             this.placeholdervalue='Enter long url...';
-           
             if(this.url!=""){
             this.loading=true
             this.urlhash = Math.random().toString(36).substring(9);
@@ -85,7 +84,19 @@ new Vue({
                 this.loading=false;
             });
             
+        },
+
+
+        onCopy(){
+            elem = document.getElementById('toast');
+            elem.classList.add("show");
+            setTimeout(function(){
+                elem.classList.remove("show");
+            },3000);
+
         }
+
+        
 
 
    

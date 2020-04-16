@@ -56,9 +56,6 @@ input{
 	-webkit-appearance: none;
 }
 
-input:focus {
-	border: .200rem solid rgb(49, 49, 49); 
-}
 
 
 .badurl{
@@ -87,15 +84,31 @@ button:hover{
   color:#ffffff;
 }
 
+
+.shorturl{
+	display: inline-flex;
+}
+
 .shorturlfield{
 	margin: 1rem 0rem 1rem 0rem;
-	padding: 0.5rem 0.5rem .5rem 0.5rem;
+	padding: 0.7rem 0.5rem 0.5rem 0.5rem;
 	border: 0.200rem solid #4caf50;
 	border-radius: 1rem;
 	color: #000000;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
+	outline: none;
+	width: fit-content; 
+}
+
+.copybutton{
+	margin: 1rem 0rem 1rem 1rem;
+	padding: 0.5rem 0.8rem .5rem 0.8rem;
+	border: 0.200rem solid #000000;
+	border-radius: 2rem;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
 	outline: none;
 	width: fit-content; 
 }
@@ -153,10 +166,11 @@ button:hover{
 	box-shadow: 0 0 20px rgba(0,0,0,0.3);
 	visibility: hidden;
 	opacity: 0;
+	
   }
   #toast.show{
 	visibility: visible;
-	animation: fadeInOut 3s;
+	animation: fadeInOut 2.5s;
   }
   
   @keyframes fadeInOut{
