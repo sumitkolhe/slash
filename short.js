@@ -1,6 +1,14 @@
 
 new ClipboardJS('#copyto');
 
+function showToast(text){
+    var x=document.getElementById("toast");
+    x.classList.add("show");
+    x.innerHTML=text;
+    setTimeout(function(){
+        x.classList.remove("show");
+    },3000);}
+
 new Vue({
     el: '#app',
 
@@ -15,7 +23,7 @@ new Vue({
         reduced:window.location.href,
         windowurl:'',
         loading:false,
-        placeholdervalue:'Enter long url'
+        placeholdervalue:'Enter long url...'
         
     },
 
@@ -24,7 +32,7 @@ new Vue({
 
         buildurl(url){
             this.badurl=false;
-            this.placeholdervalue='Enter long url';
+            this.placeholdervalue='Enter long url...';
            
             if(this.url!=""){
             this.loading=true
@@ -58,12 +66,11 @@ new Vue({
             //bad url
             this.badurl=true;
             this.url='';
-            this.placeholdervalue='Not a valid url';
+            this.placeholdervalue='Not a valid url!';
             this.loading=false;
         }
     },
 
-    
         posturl(urlhash,longurl){
             axios.post(endpoint,{
                 hash:this.urlhash,

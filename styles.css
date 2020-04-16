@@ -1,14 +1,19 @@
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
 body{
     outline: 0;
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 
 header{
     display: block;
-    padding: 5rem 0rem 0rem 0;
+    padding: 4rem 0rem 0rem 0;
     font-size: 1.5rem;
 }
 
@@ -16,7 +21,6 @@ header{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
     padding: 0 21% 0 21%;
 }
 
@@ -24,7 +28,7 @@ header{
 	.container{
 		padding-left: 6%;
 		padding-right: 6%;
-	}
+	}	
 }
 
 footer{
@@ -40,20 +44,28 @@ form{
 
 input{
     border-radius: .75rem;
-    margin: 0rem 0rem 1.5rem 0;
+    margin: 0rem 0rem 1.5rem 0rem;
     display: block;
-	padding-top: .5625rem 0.5625rem 0rem 1.25rem;
-	border: 0.130rem solid #757575;
+	border: 0.200rem solid #757575;
 	outline: none;
 	font-weight: bolder;
-	font-size: large;	
-	padding: 1rem 20% 1rem 1rem;
+	font-size: large;
+	min-width: 85%;	
+	padding: 1rem 1rem 1rem 1rem;
 	line-height: 1.5rem;
 	-webkit-appearance: none;
 }
 
-button{
-    
+input:focus {
+	border: .200rem solid rgb(49, 49, 49); 
+}
+
+
+.badurl{
+	border: .200rem solid #f55; 
+}
+
+button{   
     -webkit-appearance: none;
 	-moz-appearance: none;
     display: inline-block;
@@ -65,8 +77,8 @@ button{
 	color: #000000;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-	transition: all 0.5s ease;
-    outline: none;
+	transition: all 0.3s ease;
+	outline: none;
 }
 
 
@@ -75,8 +87,17 @@ button:hover{
   color:#ffffff;
 }
 
-.shorturl{
-    width: 100%;     
+.shorturlfield{
+	margin: 1rem 0rem 1rem 0rem;
+	padding: 0.5rem 0.5rem .5rem 0.5rem;
+	border: 0.200rem solid #4caf50;
+	border-radius: 1rem;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	transition: all 0.2s;
+	outline: none;
+	width: fit-content; 
 }
 
 .spacer{
@@ -104,7 +125,7 @@ button:hover{
   -webkit-animation-delay: 0.2s;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
-  transition: all .5s;
+  
 }
 
 @keyframes rotateAnimation {
@@ -116,3 +137,29 @@ button:hover{
     100% {-webkit-transform: rotate(360deg);}
 }
 
+#toast{
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	background-color:black;
+	font-family: 'Montserrat';
+	color:white;
+	padding: 16px;
+	border-bottom: 4px;
+	border-radius: 2rem;
+	text-align: center;
+	z-index: 1;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	visibility: hidden;
+	opacity: 0;
+  }
+  #toast.show{
+	visibility: visible;
+	animation: fadeInOut 3s;
+  }
+  
+  @keyframes fadeInOut{
+	5%,95%{opacity:1; top: 50px; }
+	15%,85%{opacity: 1; top: 30px;}
+  }

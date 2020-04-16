@@ -35,10 +35,12 @@
             <button v-bind:class="{loading:loading}"  v-on:click="buildurl">Reduce me</button>
         </form>
         <div class="shorturl">
-            <p class="shorturlfield" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null">
+            <p class="shorturlfield" id="copyto" data-clipboard-target="#copyto" v-if="stored!=null" onclick="showToast('Link copied')">
                 {{stored}}
             </p>
+            <div id="toast"></div>
         </div>
+        
         <div class="spacer"></div>
         <footer>
             <p>Made with ❤️ in Pune, India</p>
@@ -47,7 +49,9 @@
    
    
 <script src="short.js"></script>
+<script>
 
+    </script>
 
 </body>
 </html>
