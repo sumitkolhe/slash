@@ -22,17 +22,12 @@ header{
 .container{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 	padding: 0 21% 0 21%;
 	
 }
 
-@media only screen and (max-width: 480px) {
-	.container{
-		padding-left: 6%;
-		padding-right: 6%;
-	}	
-}
+
 
 footer{
 	display: flex;
@@ -181,3 +176,23 @@ button:hover{
 	5%,95%{opacity:1; top: 50px; }
 	15%,85%{opacity: 1; top: 30px;}
   }
+
+
+  @media only screen and (max-width: 480px) {
+	.container{
+		padding-left: 6%;
+		padding-right: 6%;
+
+	}	
+
+	input{
+		margin-right: 0;
+	}
+	.shorturl{
+		flex-direction: column;
+		
+	}
+	.copybutton{
+		margin: 0;
+	}
+}
