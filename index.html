@@ -41,11 +41,12 @@
             <h1>Reduced!</h1>
         </header>
         <form onSubmit="return false;">
+
             <input type="text" class="textbox" v-on:keyup.enter="checkUrl" v-bind:class="{badurl:badurl}"
                 :placeholder="urlplaceholder" v-model="url">
             <input type="text" class="alias" v-bind:class="{badalias:badalias}" :placeholder="aliasplaceholder"
                 v-model="alias">
-            <button v-bind:class="{loading:loading}" v-on:click="checkUrl">Reduce me</button>
+            <button v-on:click="checkUrl">{{buttontext}}</button>
         </form>
         <div class="shorturl">
             <p class="shorturlfield" id="copyto" v-if="stored!=null">

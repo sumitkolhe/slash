@@ -17,11 +17,12 @@ new Vue({
     check: "",
     badalias: false,
     words: "",
+    buttontext: "Reduce me",
   },
 
   methods: {
     checkUrl(url, alias) {
-      this.loading = true;
+      this.buttontext = "Reducing...";
       this.badalias = false;
       this.badurl = false;
       this.urlplaceholder = "Enter long url...";
@@ -45,7 +46,7 @@ new Vue({
         this.badurl = true;
         this.url = "";
         this.urlplaceholder = "Not a valid url!";
-        this.loading = false;
+        this.buttontext = "Reduce me";
       }
     },
 
@@ -71,7 +72,7 @@ new Vue({
           this.postData(words, this.inputUrl, this.shortUrl);
         } else {
           if (words == this.alias) {
-            this.loading = false;
+            this.buttontext = "Reduce me";
             this.badalias = true;
             this.alias = "";
             this.aliasplaceholder = "Alias is already taken...";
@@ -110,7 +111,7 @@ new Vue({
         .finally(() => {
           this.stored = this.shortUrl;
           console.log(this.stored);
-          this.loading = false;
+          this.buttontext = "Reduce me";
         });
     },
 

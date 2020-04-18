@@ -7,12 +7,14 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: #f2f2f2;
 }
 
 header {
   display: block;
   padding: 4% 0rem 0rem 0;
   font-size: 1.5rem;
+  color: #2c2b2b;
 }
 
 .container {
@@ -47,6 +49,10 @@ form {
   -webkit-appearance: none;
 }
 
+.textbox:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 .alias {
   border-radius: 0.75rem;
   margin: 0rem 0rem 1.5rem 0rem;
@@ -61,12 +67,18 @@ form {
   -webkit-appearance: none;
 }
 
+.alias:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 .badurl {
   border: 0.2rem solid #f55;
+  box-shadow: 0 0 10px #f55;
 }
 
 .badalias {
   border: 0.2rem solid #f55;
+  box-shadow: 0 0 10px #f55;
 }
 
 button {
@@ -74,7 +86,7 @@ button {
   -moz-appearance: none;
   display: inline-block;
   padding: 1rem 1.5rem 1rem 1.5rem;
-  border: 0.225rem solid #000000;
+  border: 0.225rem solid #2c2b2b;
   border-radius: 2rem;
   font-size: larger;
   background-color: #ffffff;
@@ -83,6 +95,7 @@ button {
   text-decoration: none;
   transition: all 0.3s ease;
   outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
@@ -96,9 +109,9 @@ button:hover {
 
 .shorturlfield {
   margin: 1rem 0rem 1rem 0rem;
-  padding: 0.7rem 0.5rem 0.5rem 0.5rem;
-  border: 0.2rem solid #4caf50;
-  border-radius: 1rem;
+  padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+  border: 0.22rem solid #4caf50;
+  border-radius: 1.5rem;
   color: #000000;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -165,7 +178,7 @@ button:hover {
 
 #toast {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%);
   background-color: black;
@@ -189,12 +202,12 @@ button:hover {
   5%,
   95% {
     opacity: 1;
-    top: 50px;
+    bottom: 50px;
   }
   15%,
   85% {
     opacity: 1;
-    top: 30px;
+    bottom: 30px;
   }
 }
 
