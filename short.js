@@ -1,107 +1,125 @@
-
-
-function showToast(text){
-    var x=document.getElementById("toast");
-    x.classList.add("show");
-    x.innerHTML=text;
-    setTimeout(function(){
-        x.classList.remove("show");
-    },3000);}
-
-
 new Vue({
-    el: '#app',
+  el: "#app",
 
-    data: {
-        longurl : '',
-        url:'',
-        urlhash:'',
-        finalurl:'',
-        fixedurl:'',
-        stored:null,
-        badurl:false,
-        reduced:window.location.href,
-        windowurl:'',
-        loading:false,
-        placeholdervalue:'Enter long url...',
-        
+  data: {
+    domain: window.location.origin,
+    url: "",
+    urlplaceholder: "Enter long url...",
+    aliasplaceholder: "Optional alias...",
+    loading: false,
+    badurl: false,
+    alias: "",
+    hash: "",
+    shortUrl: "",
+    finalHash: "",
+    inputUrl: "",
+    stored: null,
+    check: "",
+    badalias: false,
+    words: "",
+  },
+
+  methods: {
+    checkUrl(url, alias) {
+      this.loading = true;
+      this.badalias = false;
+      this.badurl = false;
+      this.urlplaceholder = "Enter long url...";
+      this.aliasplaceholder = "Optional alias...";
+
+      var fullpattern = /(?:(?:https?|ftp|file):\/\/|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim;
+      var halfpattern = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm;
+      if (fullpattern.test(this.url)) {
+        //return this.url;
+        //all correct including http and domain
+        this.inputUrl = this.url;
+        this.buildUrl(this.inputUrl, this.alias);
+        //return (this.url);
+      } else if (halfpattern.test(this.url)) {
+        //return "http://"+this.url;
+        //domain correct http not present
+        this.inputUrl = "http://" + this.url;
+        this.buildUrl(this.inputUrl, this.alias);
+      } else {
+        //bad url
+        this.badurl = true;
+        this.url = "";
+        this.urlplaceholder = "Not a valid url!";
+        this.loading = false;
+      }
     },
 
-    methods : {
-       
-
-        buildurl(url){
-            this.badurl=false;
-            this.placeholdervalue='Enter long url...';
-            if(this.url!=""){
-            this.loading=true
-            this.urlhash = Math.random().toString(36).substring(9);
-            this.finalurl = this.reduced+"#"+this.urlhash;
-            this.checkurl(this.url)
-           
-            }
-        },
-
-
-        checkurl(url){  
-            var fullpattern = /(?:(?:https?|ftp|file):\/\/|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/igm;
-            var halfpattern = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm;
-            if (fullpattern.test(this.url)) {
-            //return this.url;
-            //all correct including http and domain
-            this.longurl=this.url;
-            this.posturl(this.urlhash,this.longurl)
-
-        } 
-        else if(halfpattern.test(this.url)){
-        
-            //return "http://"+this.url;
-            //domain correct http not present
-            this.longurl="http://"+this.url;
-            this.posturl(this.urlhash,this.longurl)
-            
-        }
-        else{
-            //bad url
-            this.badurl=true;
-            this.url='';
-            this.placeholdervalue='Not a valid url!';
-            this.loading=false;
-        }
+    buildUrl(inputUrl, alias) {
+      if (this.alias != "") {
+        this.runner(this.alias);
+      } else {
+        this.x = this.genHash();
+        console.log("generated hash-> " + this.x);
+        this.runner(this.x);
+      }
     },
 
-        posturl(urlhash,longurl){
-            axios.post(endpoint,{
-                hash:this.urlhash,
-                link:this.longurl
-                
-            })
-            .then(response=>{
+    async runner(words) {
+      console.log(words);
+      const checker = await this.isalias(words);
 
-            })
-            .finally(() => {
-                this.stored=this.finalurl;
-                this.loading=false;
-            });
-            
-        },
-
-
-        onCopy(){
-            elem = document.getElementById('toast');
-            elem.classList.add("show");
-            setTimeout(function(){
-                elem.classList.remove("show");
-            },3000);
-
+      if (checker.data) {
+        if (checker.data[0] == null) {
+          console.log("Alias available");
+          this.shortUrl = this.domain + "/#" + words;
+          console.log(this.inputUrl);
+          this.postData(words, this.inputUrl, this.shortUrl);
+        } else {
+          if (words == this.alias) {
+            this.loading = false;
+            this.badalias = true;
+            this.alias = "";
+            this.aliasplaceholder = "Alias is already taken...";
+          } else if (words != this.alias) {
+            this.runner(this.genHash());
+          }
         }
+      }
+    },
 
-        
+    async isalias(words) {
+      try {
+        return await axios.get(endpoint + "?q=hash:" + words);
+      } catch (error) {
+        console.error(error);
+      }
+    },
 
+    genHash() {
+      var randomhash = "";
+      var list = "abcdefghijklmnopqrstuvwxyz0123456789";
+      for (var i = 0; i < 3; i++) {
+        randomhash += list.charAt(Math.floor(Math.random() * list.length));
+      }
+      return randomhash;
+    },
 
-   
-    }
+    postData(words, inputUrl) {
+      console.log(words);
+      axios
+        .post(endpoint, {
+          hash: words,
+          link: inputUrl,
+        })
+        .then((response) => {})
+        .finally(() => {
+          this.stored = this.shortUrl;
+          console.log(this.stored);
+          this.loading = false;
+        });
+    },
 
-
+    onCopy() {
+      elem = document.getElementById("toast");
+      elem.classList.add("show");
+      setTimeout(function () {
+        elem.classList.remove("show");
+      }, 3000);
+    },
+  },
 });
-

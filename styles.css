@@ -1,129 +1,141 @@
-*{
-	font-family: 'Montserrat', sans-serif;
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
-body{
-    outline: 0;
-    margin: 0;
-    padding: 0;
-	border: 0;  
+body {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-header{
-    display: block;
-    padding: 4rem 0rem 0rem 0;
-	font-size: 1.5rem;	
+header {
+  display: block;
+  padding: 4% 0rem 0rem 0;
+  font-size: 1.5rem;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-	padding: 0 21% 0 21%;	
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 21% 0 21%;
 }
 
-
-
-footer{
-	display: flex;
-	align-self: center;
+footer {
+  display: flex;
+  align-self: center;
 }
 
-form{
-	width: 100%;
-	min-height: 10rem;
-    padding: 0rem 0rem 1rem 0rem;
+form {
+  width: 100%;
+  min-height: 10%;
+  padding: 0rem 0rem 1rem 0rem;
 }
 
-input{
-    border-radius: .75rem;
-    margin: 0rem 0rem 1.5rem 0rem;
-    display: block;
-	border: 0.200rem solid #757575;
-	outline: none;
-	font-weight: bolder;
-	font-size: large;
-	min-width: 85%;	
-	padding: 1rem 1rem 1rem 1rem;
-	line-height: 1.5rem;
-	-webkit-appearance: none;
+.textbox {
+  border-radius: 0.75rem;
+  margin: 0rem 0rem 1.5rem 0rem;
+  display: block;
+  border: 0.2rem solid #757575;
+  outline: none;
+  font-weight: bolder;
+  font-size: large;
+  min-width: 85%;
+  padding: 1rem 1rem 1rem 1rem;
+  line-height: 1.5rem;
+  -webkit-appearance: none;
 }
 
-
-
-.badurl{
-	border: .200rem solid #f55; 
+.alias {
+  border-radius: 0.75rem;
+  margin: 0rem 0rem 1.5rem 0rem;
+  display: block;
+  border: 0.2rem solid #757575;
+  outline: none;
+  font-weight: bolder;
+  font-size: large;
+  min-width: 45%;
+  padding: 1rem 1rem 1rem 1rem;
+  line-height: 1.5rem;
+  -webkit-appearance: none;
 }
 
-button{   
-    -webkit-appearance: none;
-	-moz-appearance: none;
-    display: inline-block;
-	padding: 1.0rem 1.5rem 1.0rem 1.5rem;
-	border: 0.225rem solid #000000;
-	border-radius: 2rem;
-	font-size: larger;
-	background-color: #ffffff;
-	color: #000000;
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	outline: none;
+.badurl {
+  border: 0.2rem solid #f55;
 }
 
-
-button:hover{
-  background-color:#000000;
-  color:#ffffff;
+.badalias {
+  border: 0.2rem solid #f55;
 }
 
-
-.shorturl{
-	display: inline-flex;
-}
-
-.shorturlfield{
-	margin: 1rem 0rem 1rem 0rem;
-	padding: 0.7rem 0.5rem 0.5rem 0.5rem;
-	border: 0.200rem solid #4caf50;
-	border-radius: 1rem;
-	color: #000000;
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	transition: all 0.2s;
-	outline: none;
-	width: fit-content; 
-}
-
-.copybutton{
-	margin: 1rem 0rem 1rem 1rem;
-	padding: 0.5rem 0.8rem .5rem 0.8rem;
-	border: 0.200rem solid #000000;
-	border-radius: 2rem;
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	outline: none;
-	width: fit-content;
-	position: relative; 
-}
-
-.spacer{
-    display: flex;
-    flex-grow: 1;
-}
-
-.loading{
-  font-size:0;
-  width:40px;
-  height:40px;
-  border-radius:20px;
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   display: inline-block;
-  padding:0;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border: 0.225rem solid #000000;
+  border-radius: 2rem;
+  font-size: larger;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  background-color: #000000;
   color: #ffffff;
-  border:4px solid #000000;
-  border-bottom:3px solid rgba(255,255,255,0.0);
-  border-left:3px solid rgba(255,255,255,0.0);
-  background-color:transparent !important;
+}
+
+.shorturl {
+  display: inline-flex;
+}
+
+.shorturlfield {
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+  border: 0.2rem solid #4caf50;
+  border-radius: 1rem;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  transition: all 0.2s;
+  outline: none;
+  width: fit-content;
+}
+
+.copybutton {
+  margin: 1rem 0rem 1rem 1rem;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  border: 0.2rem solid #000000;
+  border-radius: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  outline: none;
+  width: fit-content;
+  position: relative;
+}
+
+.spacer {
+  display: flex;
+  flex-grow: 1;
+}
+
+.loading {
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0;
+  color: #ffffff;
+  border: 4px solid #000000;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  border-left: 3px solid rgba(255, 255, 255, 0);
+  background-color: transparent !important;
   animation-name: rotateAnimation;
   -webkit-animation-name: wk-rotateAnimation;
   animation-duration: 1s;
@@ -135,57 +147,70 @@ button:hover{
 }
 
 @keyframes rotateAnimation {
-    0%   {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @-webkit-keyframes wk-rotateAnimation {
-    0%   {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(360deg);}
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
-#toast{
-	position: fixed;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%);
-	background-color:black;
-	font-family: 'Montserrat';
-	color:white;
-	padding: 16px;
-	border-bottom: 4px;
-	border-radius: 2rem;
-	text-align: center;
-	z-index: 1;
-	box-shadow: 0 0 20px rgba(0,0,0,0.3);
-	visibility: hidden;
-	opacity: 0;
-	
+#toast {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: black;
+  font-family: "Montserrat";
+  color: white;
+  padding: 16px;
+  border-bottom: 4px;
+  border-radius: 2rem;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+}
+#toast.show {
+  visibility: visible;
+  animation: fadeInOut 2.5s;
+}
+
+@keyframes fadeInOut {
+  5%,
+  95% {
+    opacity: 1;
+    top: 50px;
   }
-  #toast.show{
-	visibility: visible;
-	animation: fadeInOut 2.5s;
+  15%,
+  85% {
+    opacity: 1;
+    top: 30px;
   }
-  
-  @keyframes fadeInOut{
-	5%,95%{opacity:1; top: 50px; }
-	15%,85%{opacity: 1; top: 30px;}
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
-
-  @media only screen and (max-width: 480px) {
-	.container{
-		padding-left: 6%;
-		padding-right: 6%;
-	}	
-
-	input{
-		margin-right: 0;
-	}
-	.shorturl{
-		flex-direction: column;
-		
-	}
-	.copybutton{
-		margin: 0;
-	}
+  input {
+    margin-right: 0;
+  }
+  .shorturl {
+    flex-direction: column;
+  }
+  .copybutton {
+    margin: 0;
+  }
 }
