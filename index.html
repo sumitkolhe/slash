@@ -48,7 +48,7 @@
                 v-model="alias">
             <button v-on:click="checkUrl">{{buttontext}}</button>
         </form>
-        <div class="shorturl">
+        <div class="shorturl" >
             <p class="shorturlfield" id="copyto" v-if="stored!=null">
                 {{stored}}
             </p>
@@ -58,11 +58,9 @@
             <div id="toast">Link copied</div>
         </div>
 
-        <div class="spacer"></div>
-        <footer>
-            <p></p>
-        </footer>
+        
     </main>
+   
 
     <script src="short.js"></script>
     <script></script>

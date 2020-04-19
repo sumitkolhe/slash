@@ -8,6 +8,7 @@ body {
   padding: 0;
   border: 0;
   background-color: #f2f2f2;
+  overflow:scroll;
 }
 
 header {
@@ -20,14 +21,12 @@ header {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   padding: 0 21% 0 21%;
+  max-height: 100%;
 }
 
-footer {
-  display: flex;
-  align-self: center;
-}
+
 
 form {
   width: 100%;
@@ -104,7 +103,8 @@ button:hover {
 }
 
 .shorturl {
-  display: inline-flex;
+  display: flex;
+  flex-grow: 1;
 }
 
 .shorturlfield {
@@ -132,10 +132,7 @@ button:hover {
   position: relative;
 }
 
-.spacer {
-  display: flex;
-  flex-grow: 1;
-}
+
 
 .loading {
   font-size: 0;
