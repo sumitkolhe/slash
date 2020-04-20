@@ -5,7 +5,7 @@ new Vue({
     domain: window.location.origin,
     url: "",
     urlplaceholder: "Enter long url...",
-    aliasplaceholder: "Optional alias...",
+    aliasplaceholder: "Alias (Optional)",
     loading: false,
     badurl: false,
     alias: "",
@@ -26,7 +26,7 @@ new Vue({
       this.badalias = false;
       this.badurl = false;
       this.urlplaceholder = "Enter long url...";
-      this.aliasplaceholder = "Optional alias...";
+      this.aliasplaceholder = "Alias (Optional)";
 
       var fullpattern = /(?:(?:https?|ftp|file):\/\/|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/gim;
       var halfpattern = /^[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/gm;

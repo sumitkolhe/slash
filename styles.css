@@ -7,8 +7,10 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: #f2f2f2;
-  overflow:scroll;
+  background-image: url("back1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+  
 }
 
 header {
