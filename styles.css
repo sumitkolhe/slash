@@ -7,14 +7,12 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  background-image: url('back1.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  /*height: 100%;
+  
   background-image: url("back1.jpg");
 	background-size: cover;
-	background-repeat: no-repeat;*/
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: fixed;
   
 }
 
