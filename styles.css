@@ -7,9 +7,14 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background-image: url('back1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*height: 100%;
   background-image: url("back1.jpg");
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
   
 }
 
@@ -33,6 +38,7 @@ header {
 form {
   width: 100%;
   min-height: 10%;
+  
   padding: 0rem 0rem 1rem 0rem;
 }
 
