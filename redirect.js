@@ -1,4 +1,4 @@
-const endpoint = "https://jsonbox.io/box_36abd34548a4d6c91dae";
+const endpoint = "https://jsonbox.io/box_2c9060a39ab171a9696c";
 var windowurl = window.location.hash.substr(1);
 
 if (window.location.hash != "") {
