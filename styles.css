@@ -7,9 +7,6 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  
- 
-  
 }
 
 header {
@@ -17,6 +14,7 @@ header {
   padding: 4% 0rem 0rem 0;
   font-size: 1.5rem;
   color: #2c2b2b;
+  letter-spacing: 10px;
 }
 
 .container {
@@ -27,12 +25,10 @@ header {
   max-height: 100%;
 }
 
-
-
 form {
   width: 100%;
   min-height: 10%;
-  
+
   padding: 0rem 0rem 1rem 0rem;
 }
 
@@ -133,8 +129,6 @@ button:hover {
   width: fit-content;
   position: relative;
 }
-
-
 
 .loading {
   font-size: 0;
