@@ -39,7 +39,7 @@ You're done!
 
 :warning: **Slash uses jsonbox.io which is an open service with public API endpoints. Do not use this service for shortening sensitive links.**
 
-:sparkling_heart: **If you want a more secure and reliable custom URL shortener, checkout **[Reduced](https://github.com/sumitkolhe/Reduced)
+:sparkling_heart: **If you want a more secure and reliable custom URL shortener, checkout** [Reduced](https://github.com/sumitkolhe/Reduced)
 
 ---
 
