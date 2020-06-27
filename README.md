@@ -1,10 +1,10 @@
 
 
-
-
-## 🔗  A simple custom URL shortener by [Sumit Kolhe](https://github.com/sumitkolhe)
+# S / A S H
 ---
-#### :heart:  Also checkout [Reduced](https://github.com/sumitkolhe/Reduced) - A MEVN stack URL shortener with public API
+### 🔗  Slash is a simple Vuejs based custom URL shortener with minimalistic design made by [Sumit Kolhe](https://github.com/sumitkolhe)
+---
+####  :rocket: Also checkout [Reduced](https://github.com/sumitkolhe/Reduced) - A MEVN stack URL shortener with free public API :rocket:
 ---
 
 <div align="center">
@@ -19,40 +19,39 @@
 
 :heart: **Lightweight and minimalistic design**: Highly minimal and simple design
 
-:rainbow: **Supports Custom Aliases**
+:rainbow: **Support for Custom Aliases**: support for user defined custom aliases
 
-:zap: **Easy to use**
+:zap: **Easy to use**: Simple and intuitive design thats easy to use
 
 :rocket: **Performance**: Slash is built using Vuejs, HTML5, and CSS3 which makes it lightning-fast and gives a great performance.
 
 ---
 
-## 🖥️  Demo
+* **Slash can be hosted on any static hosting service such as Github-pages / Vercel / Netlify / Kintohub / Firebase / Heroku etc.**
 
-[https://url.sumit.codes](https://url.sumit.codes)
+* :warning: **Slash uses jsonbox.io which is an public database service with public API endpoints. Do not use Slash for shortening sensitive links.**
 
-1. Enter a long URL
-2. Enter an alias if you want
-3. Get a shortened link
 
-You're done!
-
-:warning: **Slash uses jsonbox.io which is an open service with public API endpoints. Do not use this service for shortening sensitive links.**
-
-:sparkling_heart: **If you want a more secure and reliable custom URL shortener, checkout** [Reduced](https://github.com/sumitkolhe/Reduced)
+* :sparkling_heart: **If you want a more secure and reliable custom URL shortener, checkout** [Reduced](https://github.com/sumitkolhe/Reduced)
 
 ---
 
+## 🖥️  Demo 
+[https://url.sumit.codes](https://url.sumit.codes)
+
+
+---
 ## 🧰  Built with
 
 * VueJS 
+* HTML5
+* CSS3
 
 ---
 
 
 ## ✍️  Authors
 
-### Lead Developers
 * [**Sumit Kolhe**](https://github.com/sumitkolhe) - *Author*
 
 
