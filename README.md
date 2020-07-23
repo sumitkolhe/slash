@@ -37,7 +37,7 @@
 ---
 
 ## 🖥️  Demo 
-[https://url.sumit.codes](https://url.sumit.codes)
+[https://slash.sumit.codes](https://slash.sumit.codes)
 
 
 ---
